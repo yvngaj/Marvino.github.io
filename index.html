@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marvin's Life Journey</title>
+<style>
+  body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #dc5d5d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  #container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Added shadow */
+    outline: 2px solid #343a40;
+    transition: transform 1s ease, opacity 0.5s ease;
+  }
+  h1 {
+    color: #343a40;
+    font-family: 'Montserrat', sans-serif;
+  }
+  p {
+    color: #6c757d;
+    font-family: 'Roboto', sans-serif;
+    font-family: cursive;
+  }
+  #show-school-info {
+    background-color: #f8f9fa;
+    color: #343a40;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+  #show-school-info:hover {
+    box-shadow: 0px 0px 10px rgba(108, 117, 125, 0.7);
+  }
+  /* Rest of the styles... */
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+<div id="container">
+  <h1>Welcome to Marvin's Life Profile</h1>
+  <p>Welcome to my page! I'm more than happy to show you around my childhood. Firstly, my name is Marvin Soliman and I'm 14. I was born on the 29th of June 2009. My cousin's birthday, Jormaya, is on the 28th of June 2008, so we're basically like twins just one year apart. I grew up in Ajman beside the beach, so I'd go with my nanny to the beach almost every day, and that's where I developed my love for the beach!</p>
+  <p>
+    The school in UAE was alright, and I still have one of my closest childhood friends, Belal, with whom I'm still in touch. His mom makes one of the best goulashes!
+  </p>
+  <button id="show-school-info">Show UAE School Info</button>
+  <div id="school-info">
+    <!-- The removed part -->
+  </div>
+</div>
+<script>
+  const showSchoolInfoButton = document.getElementById('show-school-info');
+  const container = document.getElementById('container');
+
+  showSchoolInfoButton.addEventListener('click', () => {
+    container.style.transform = "translateX(150%)";
+    container.style.opacity = 0;
+    setTimeout(() => {
+      window.location.href = 'uae_school_info.html'; // Redirect to the UAE School Info page
+    }, 1000); // Delay before redirecting (in milliseconds)
+  });
+</script>
+</body>
+</html>
